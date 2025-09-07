@@ -196,18 +196,18 @@
 
     <div class="content">
         <header>
-            <h1>WP QuickMailer Plugin Documentation</h1>
+            <h1>DashMailer Plugin Documentation</h1>
         </header>
 
         <section id="title">
-            <h2>WP QuickMailer - Documentation</h2>
-            <p>Version: 1.3.0 | Author: Monzur Rahman | Support: <a href="https://wordpress.org/plugins/wp-quickmailer">wordpress.org Forum</a></p>
+            <h2>DashMailer - Documentation</h2>
+            <p>Version: 1.3.0 | Author: Monzur Rahman | Support: <a href="https://wordpress.org/plugins/DashMailer">wordpress.org Forum</a></p>
         </section>
 
         <section id="introduction">
             <h2>A) Introduction</h2>
-            <p>Thank you for choosing WP QuickMailer! This comprehensive documentation will guide you through installing, configuring, and using the plugin to send professional emails directly from your WordPress dashboard.</p>
-            <p>WP QuickMailer is a robust email solution designed for WordPress administrators to compose and send styled emails with ease. It offers recipient targeting, reusable templates, SMTP support, and detailed logging, making it ideal for newsletters, announcements, and WooCommerce customer communication.</p>
+            <p>Thank you for choosing DashMailer! This comprehensive documentation will guide you through installing, configuring, and using the plugin to send professional emails directly from your WordPress dashboard.</p>
+            <p>DashMailer is a robust email solution designed for WordPress administrators to compose and send styled emails with ease. It offers recipient targeting, reusable templates, SMTP support, and detailed logging, making it ideal for newsletters, announcements, and WooCommerce customer communication.</p>
             <p>Successful email delivery depends on proper server configuration, DNS authentication (SPF, DKIM, DMARC), and a reliable SMTP service. This guide includes detailed setup instructions using NameSilo (DNS provider) and Brevo (SMTP provider) as references.</p>
             <blockquote>For support, visit our Wordpress item page. Ensure you review the Email Deliverability Setup section to maximize email success rates.</blockquote>
         </section>
@@ -260,7 +260,7 @@
                 <li><strong>WooCommerce:</strong> Version 4.0 or higher (optional, for customer/shop manager targeting).</li>
             </ul>
             <h3>Dependencies & Limitations</h3>
-            <p>WP QuickMailer relies on external factors for successful email delivery:</p>
+            <p>DashMailer relies on external factors for successful email delivery:</p>
             <ul>
                 <li><strong>Server Dependencies:</strong>
                     <ul>
@@ -306,21 +306,21 @@
                 <li>After installation, click <strong>Activate Plugin</strong>.</li>
             </ol>
             <div class="screenshot">
-                <img src="https://github.com/monzurrahman/wpquickmailer-doc.git/plugin-installation.png" width="600px"/>
+                <img src="plugin-installation.png" width="600px"/>
                
             </div>
             <div class="screenshot">
                  <br/>
-                <img src="https://github.com/monzurrahman/wpquickmailer-doc.git/plugin-activation.png" width="600px"/>
+                <img src="plugin-activation.png" width="600px"/>
             </div>
             <h3>Method 2: FTP Upload</h3>
             <ol>
-                <li>Unzip <code>wp-quickmailer.zip</code> to get the <code>wp-quickmailer</code> folder.</li>
+                <li>Unzip <code>DashMailer.zip</code> to get the <code>DashMailer</code> folder.</li>
                 <li>Connect to your server using an FTP client (e.g., FileZilla).</li>
                 <li>Navigate to <code>wp-content/plugins/</code> in your WordPress installation.</li>
-                <li>Upload the <code>wp-quickmailer</code> folder.</li>
+                <li>Upload the <code>DashMailer</code> folder.</li>
                 <li>In your WordPress Dashboard, go to <strong>Plugins</strong>.</li>
-                <li>Find “WP QuickMailer” and click <strong>Activate</strong>.</li>
+                <li>Find “DashMailer” and click <strong>Activate</strong>.</li>
             </ol>
             <blockquote>After activation, configure SMTP and DNS settings in the Email Deliverability Setup section to ensure emails are sent successfully.</blockquote>
             
@@ -328,7 +328,7 @@
 
         <section id="email-deliverability">
             <h2>E) Email Deliverability Setup</h2>
-            <p>To ensure emails sent via WP QuickMailer reach recipients’ inboxes, you must configure DNS records (SPF, DKIM, DMARC) and an SMTP service. 
+            <p>To ensure emails sent via DashMailer reach recipients’ inboxes, you must configure DNS records (SPF, DKIM, DMARC) and an SMTP service. 
 			Email delivery generally will work after setup of SPF and DKIM. We recommend brevo.com or SendGrid (free plan: 100 emails/day). For SendGrid - Host: <code>smtp.sendgrid.net</code>, Port: 587, Username: <code>apikey</code>, Password: [Your API Key], Encryption: TLS. Alternatively, use Google Workspace (<code>smtp.gmail.com</code>, Port 587, TLS) for low-volume emails. Avoid "noreply" addresses in the From Email field above to improve deliverability. This section provides step-by-step instructions using NameSilo (DNS provider) and Brevo (SMTP provider) as examples. For other providers, consult their documentation, but the principles remain similar.</p>
             <blockquote>Since February 2024, Gmail, Yahoo, and other providers require SPF and DKIM for bulk senders. Misconfigured DNS or SMTP settings may cause emails to be rejected or marked as spam.</blockquote>
 
@@ -354,7 +354,7 @@
                     </ul>
                 </li>
             </ol>
-            <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/spf-record.png" /></div>
+            <div class="screenshot"><img src="spf-record.png" /></div>
             <blockquote>Only one SPF record is allowed per domain. Merge includes if using multiple email services (e.g., Hostinger and Brevo).</blockquote>
 
             <h3>2. Setting Up DKIM Record (NameSilo & Brevo)</h3>
@@ -376,16 +376,16 @@
                         </li>
                     </ol>
                     <div class="screenshot">
-                     <img src="https://github.com/monzurrahman/wpquickmailer-doc.git/add-domain.png" alt="Adding domain at brevo.com">
+                     <img src="add-domain.png" alt="Adding domain at brevo.com">
                     </div>
 
                     <div class="screenshot">
                          <br/>
-                     <img src="https://github.com/monzurrahman/wpquickmailer-doc.git/authentication-1.png" alt="Adding domain at brevo.com">
+                     <img src="authentication-1.png" alt="Adding domain at brevo.com">
                     </div>
                     <div class="screenshot">
                         <br/>
-                     <img src="https://github.com/monzurrahman/wpquickmailer-doc.git/authentication-2.png" alt="Adding domain at brevo.com">
+                     <img src="authentication-2.png" alt="Adding domain at brevo.com">
                     </div>
 
                 </li>
@@ -466,7 +466,7 @@
                 </li>
                 <li>Create <code>dmarc-reports@yourdomain.com</code> to receive reports.</li>
             </ol>
-            <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/dmarc.png" ></div>
+            <div class="screenshot"><img src="dmarc.png" ></div>
             <blockquote>Start with <code>p=none</code> for testing. After confirming deliverability, consider <code>p=quarantine</code> or <code>p=reject</code> for stricter enforcement. DNS changes take 24–48 hours to propagate.</blockquote>
 
             <h3>4. Verifying Sender Email (Brevo)</h3>
@@ -479,7 +479,7 @@
                 <li>Check your email for a 6-digit code and enter it in Brevo.</li>
                 <li>Confirm a green checkmark next to the sender.</li>
             </ol>
-            <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/sender-email-setup.png" alt="sender email setup"></div>
+            <div class="screenshot"><img src="sender-email-setup.png" alt="sender email setup"></div>
             <blockquote>If DKIM is set up, sender verification may be optional. Use the same From Email as in WP QuickMailer’s Settings tab.</blockquote>
 
             <h3>5. Configuring SMTP in WP QuickMailer</h3>
@@ -500,8 +500,8 @@
                 <li>Click <strong>Save Changes</strong>.</li>
                 <li>Send a test email from <strong>Settings > Send Test Email</strong> to verify.</li>
             </ol>
-            <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/smtp-details.png" alt=""></div>
-            <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/settings-tab.png" alt=""></div>
+            <div class="screenshot"><img src="smtp-details.png" alt=""></div>
+            <div class="screenshot"><img src="settings-tab.png" alt=""></div>
             <blockquote>Contact your hosting provider to ensure ports 587, 465, and 2525 are open for <code>smtp-relay.brevo.com</code>.</blockquote>
         </section>
 
@@ -547,7 +547,7 @@
                 <li><strong>Status:</strong> ✅ Sent or ❌ Failed.</li>
                 <li><strong>Clear All Logs:</strong> Delete all log entries.</li>
             </ul>
-                 <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/email-logs.png" alt="Email logs"></div>
+                 <div class="screenshot"><img src="email-logs.png" alt="Email logs"></div>
             <h3>4. Templates Tab</h3>
             <p>Create and manage reusable email templates.</p>
             <ul>
@@ -557,7 +557,7 @@
             <small>N.B.: The html and body tags are eliminated automatically when saving an email template. You are suggested to use the code of between body tag . i.e. <code>&lt;<body>body&gt;</code>  This Code only<code>&lt;<body>/body&gt;</code> 
                 when using code in the Message portion and in code editor.
             </small>
-             <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/templates-tab.png" alt=""></div>
+             <div class="screenshot"><img src="templates-tab.png" alt=""></div>
         </section>
 
         <section id="for-developers">
@@ -688,7 +688,7 @@ define('WP_DEBUG_DISPLAY', false);
 
         <section id="credits">
             <h2>K) Credits</h2>
-            <p>WP QuickMailer was developed with passion, adhering to WordPress coding standards and leveraging core functions like <code>wp_mail()</code>.</p>
+            <p>DashMailer was developed with passion, adhering to WordPress coding standards and leveraging core functions like <code>wp_mail()</code>.</p>
             <p>Special thanks to our users for their support!</p>
         </section>
     </div>
