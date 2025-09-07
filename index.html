@@ -301,7 +301,7 @@
                 <li>Log in to your WordPress Dashboard.</li>
                 <li>Go to <strong>Plugins > Add New</strong>.</li>
                 <li>Click <strong>Upload Plugin</strong> at the top.</li>
-                <li>Click <strong>Choose File</strong> and select <code>wp-quickmailer.zip</code>.</li>
+                <li>Click <strong>Choose File</strong> and select <code>Dashmailer.zip</code>.</li>
                 <li>Click <strong>Install Now</strong>.</li>
                 <li>After installation, click <strong>Activate Plugin</strong>.</li>
             </ol>
@@ -480,14 +480,14 @@
                 <li>Confirm a green checkmark next to the sender.</li>
             </ol>
             <div class="screenshot"><img src="sender-email-setup.png" alt="sender email setup"></div>
-            <blockquote>If DKIM is set up, sender verification may be optional. Use the same From Email as in WP QuickMailer’s Settings tab.</blockquote>
+            <blockquote>If DKIM is set up, sender verification may be optional. Use the same From Email as in Dashmailer’s Settings tab.</blockquote>
 
-            <h3>5. Configuring SMTP in WP QuickMailer</h3>
-            <p>Enable SMTP in WP QuickMailer for reliable email delivery.</p>
+            <h3>5. Configuring SMTP in Dashmailer</h3>
+            <p>Enable SMTP in Dashmailer for reliable email delivery.</p>
             <ol>
                 <li>In Brevo, go to <strong>Account Dropdown > SMTP & API</strong>.</li>
                 <li>Copy <strong>SMTP Login</strong> and <strong>SMTP Key</strong> (regenerate if needed).</li>
-                <li>In WordPress, go to <strong>QuickMailer > Settings</strong>.</li>
+                <li>In WordPress, go to <strong>Dashmailer > Settings</strong>.</li>
                 <li>Check <strong>Enable SMTP</strong> and enter:
                     <ul>
                         <li><strong>Host:</strong> <code>smtp-relay.brevo.com</code></li>
@@ -507,7 +507,7 @@
 
         <section id="getting-started">
             <h2>F) Getting Started - The Admin Interface</h2>
-            <p>After installation and deliverability setup, configure WP QuickMailer via the <strong>QuickMailer</strong> menu in your WordPress dashboard. The plugin has four tabs: Composer, Settings, Email Logs, and Templates.</p>
+            <p>After installation and deliverability setup, configure Dashmailer via the <strong>Dashmailer</strong> menu in your WordPress dashboard. The plugin has four tabs: Composer, Settings, Email Logs, and Templates.</p>
 
             <h3>1. Composer Tab</h3>
             <p>Compose and send emails using the rich text editor.</p>
@@ -526,7 +526,7 @@
                 <li><strong>Message:</strong> Use TinyMCE to format the email body.</li>
                 <li>Click <strong>Send Email</strong> to send. Check Email Logs for status.</li>
             </ul>
-                <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/composer-tab.png" alt="composer tab"></div>
+                <div class="screenshot"><img src="composer-tab.png" alt="composer tab"></div>
             <h3>2. Settings Tab</h3>
             <p>Configure global email settings and SMTP.</p>
             <ul>
@@ -537,7 +537,7 @@
                 <li><strong>Send Test Email:</strong> Test email delivery to any address.</li>
                 <li><strong>Email Diagnostics:</strong> View server email capabilities for troubleshooting.</li>
             </ul>
-                <div class="screenshot"><img src="https://github.com/monzurrahman/wpquickmailer-doc.git/settings-tab.png" alt="settings tab"></div>
+                <div class="screenshot"><img src="settings-tab.png" alt="settings tab"></div>
             <h3>3. Email Logs Tab</h3>
             <p>View the last 50 sent emails.</p>
             <ul>
@@ -562,7 +562,7 @@
 
         <section id="for-developers">
             <h2>G) For Developers (Hooks & Filters)</h2>
-            <p>WP QuickMailer includes WordPress filters for customization. Add these to your theme’s <code>functions.php</code> or a custom plugin.</p>
+            <p>Dashmailer includes WordPress filters for customization. Add these to your theme’s <code>functions.php</code> or a custom plugin.</p>
 
             <h3>Filter: wpqm_mail_subject</h3>
             <p>Modify the email subject before sending.</p>
@@ -591,7 +591,7 @@ This email is confidential.
             <pre>
 add_filter('wpqm_email', 'add_custom_mail_header', 10, 1);
 function add_custom_mail_header($headers) {
-    $headers[] = 'X-Mailer: WP-QuickMailer-Custom';
+    $headers[] = 'X-Mailer: Dashmailer-Custom';
     return $headers;
 }
             </pre>
@@ -618,7 +618,7 @@ function add_custom_mail_header($headers) {
                 <li>Ensure the SPF record is set in NameSilo (e.g., <code>v=spf1 include:_spf.sib.com ~all</code>). Wait 24–48 hours for propagation.</li>
                 <li>Verify that Brevo added the DKIM (and optionally DMARC) records in NameSilo’s DNS settings. Check with MX Toolbox (<code>dkim:yourdomain.com:sib</code> or <code>dmarc:yourdomain.com</code>).</li>
                 <li>Confirm the sender email is verified in Brevo (<strong>Senders, Domains & IP > Senders</strong>).</li>
-                <li>Check WP QuickMailer’s Email Logs and enable <code>WP_DEBUG_LOG</code> for errors.</li>
+                <li>Check Dashmailer’s Email Logs and enable <code>WP_DEBUG_LOG</code> for errors.</li>
                 <li>Contact Brevo support if DNS records weren’t added automatically or if deliverability issues persist.</li>
             </ul>
 
@@ -639,10 +639,10 @@ define('WP_DEBUG_DISPLAY', false);
             </ul>
 
             <h3>Q: Can I test the Spammyness of my Emails or setup?</h3>
-            <p>Verify email setup in WP QuickMailer settings and test with a free tools like Mail-Tester.</p>
+            <p>Verify email setup in Dashmailer's settings and test with a free tools like Mail-Tester.</p>
             <p>We don't guarantee the service of those third party tools but we found it working</p>
 
-            <h3>Q: Can I use WP QuickMailer without SMTP?</h3>
+            <h3>Q: Can I use Dashmailer without SMTP?</h3>
             <p>Yes, but PHP <code>mail()</code> is less reliable and often blocked by hosts or filtered by recipients. SMTP (e.g., Brevo) is strongly recommended.</p>
 
             <h3>Q: Why is my test email not sending?</h3>
@@ -673,10 +673,10 @@ define('WP_DEBUG_DISPLAY', false);
 
         <section id="support">
             <h2>J) Support</h2>
-            <p>We don't offer dedicated support via wordpress.org forum comments and support sections for WP QuickMailer.</p>
+            <p>We don't offer dedicated support via wordpress.org forum comments and support sections for Dashmailer.</p>
             <p>Include the following when requesting support:</p>
             <ul>
-                <li>WP QuickMailer version.</li>
+                <li>Dashmailer version.</li>
                 <li>WordPress version.</li>
                 <li>Detailed issue description.</li>
                 <li>Error messages (if any).</li>
