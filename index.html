@@ -42,7 +42,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashMailer Plugin Documentation</title>
+    <title>Monzur Mailer wordpress plugin Documentation</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -196,18 +196,18 @@
 
     <div class="content">
         <header>
-            <h1>DashMailer Plugin Documentation</h1>
+            <h1>Monzur Mailer wordpress plugin documentation</h1>
         </header>
 
         <section id="title">
-            <h2>DashMailer - Documentation</h2>
-            <p>Version: 1.3.0 | Author: Monzur Rahman | Support: <a href="https://wordpress.org/plugins/DashMailer">wordpress.org Forum</a></p>
+            <h2>Monzur Mailer - Documentation</h2>
+            <p>Version: 1.3.0 | Author: Monzur Rahman | Support: <a href="https://wordpress.org/plugins/monzurmailer">wordpress.org Forum</a></p>
         </section>
 
         <section id="introduction">
             <h2>A) Introduction</h2>
-            <p>Thank you for choosing DashMailer! This comprehensive documentation will guide you through installing, configuring, and using the plugin to send professional emails directly from your WordPress dashboard.</p>
-            <p>DashMailer is a robust email solution designed for WordPress administrators to compose and send styled emails with ease. It offers recipient targeting, reusable templates, SMTP support, and detailed logging, making it ideal for newsletters, announcements, and WooCommerce customer communication.</p>
+            <p>Thank you for choosing Monzur Mailer! This comprehensive documentation will guide you through installing, configuring, and using the plugin to send professional emails directly from your WordPress dashboard.</p>
+            <p>Monzur Mailer is a robust email solution designed for WordPress administrators to compose and send styled emails with ease. It offers recipient targeting, reusable templates, SMTP support, and detailed logging, making it ideal for newsletters, announcements, and WooCommerce customer communication.</p>
             <p>Successful email delivery depends on proper server configuration, DNS authentication (SPF, DKIM, DMARC), and a reliable SMTP service. This guide includes detailed setup instructions using NameSilo (DNS provider) and Brevo (SMTP provider) as references.</p>
             <blockquote>For support, visit our Wordpress item page. Ensure you review the Email Deliverability Setup section to maximize email success rates.</blockquote>
         </section>
@@ -260,7 +260,7 @@
                 <li><strong>WooCommerce:</strong> Version 4.0 or higher (optional, for customer/shop manager targeting).</li>
             </ul>
             <h3>Dependencies & Limitations</h3>
-            <p>DashMailer relies on external factors for successful email delivery:</p>
+            <p>Monzur Mailer relies on external factors for successful email delivery:</p>
             <ul>
                 <li><strong>Server Dependencies:</strong>
                     <ul>
@@ -301,7 +301,7 @@
                 <li>Log in to your WordPress Dashboard.</li>
                 <li>Go to <strong>Plugins > Add New</strong>.</li>
                 <li>Click <strong>Upload Plugin</strong> at the top.</li>
-                <li>Click <strong>Choose File</strong> and select <code>Dashmailer.zip</code>.</li>
+                <li>Click <strong>Choose File</strong> and select <code>monzurmailer.zip</code>.</li>
                 <li>Click <strong>Install Now</strong>.</li>
                 <li>After installation, click <strong>Activate Plugin</strong>.</li>
             </ol>
@@ -315,12 +315,12 @@
             </div>
             <h3>Method 2: FTP Upload</h3>
             <ol>
-                <li>Unzip <code>DashMailer.zip</code> to get the <code>DashMailer</code> folder.</li>
+                <li>Unzip <code>monzurmailer.zip</code> to get the <code>monzurmailer</code> folder.</li>
                 <li>Connect to your server using an FTP client (e.g., FileZilla).</li>
                 <li>Navigate to <code>wp-content/plugins/</code> in your WordPress installation.</li>
-                <li>Upload the <code>DashMailer</code> folder.</li>
+                <li>Upload the <code>monzurmailer</code> folder.</li>
                 <li>In your WordPress Dashboard, go to <strong>Plugins</strong>.</li>
-                <li>Find “DashMailer” and click <strong>Activate</strong>.</li>
+                <li>Find monzurmailer and click <strong>Activate</strong>.</li>
             </ol>
             <blockquote>After activation, configure SMTP and DNS settings in the Email Deliverability Setup section to ensure emails are sent successfully.</blockquote>
             
@@ -328,8 +328,8 @@
 
         <section id="email-deliverability">
             <h2>E) Email Deliverability Setup</h2>
-            <p>To ensure emails sent via DashMailer reach recipients’ inboxes, you must configure DNS records (SPF, DKIM, DMARC) and an SMTP service. 
-			Email delivery generally will work after setup of SPF and DKIM. We recommend brevo.com or SendGrid (free plan: 100 emails/day). For SendGrid - Host: <code>smtp.sendgrid.net</code>, Port: 587, Username: <code>apikey</code>, Password: [Your API Key], Encryption: TLS. Alternatively, use Google Workspace (<code>smtp.gmail.com</code>, Port 587, TLS) for low-volume emails. Avoid "noreply" addresses in the From Email field above to improve deliverability. This section provides step-by-step instructions using NameSilo (DNS provider) and Brevo (SMTP provider) as examples. For other providers, consult their documentation, but the principles remain similar.</p>
+            <p>To ensure emails sent via Monzur Mailer reach recipients’ inboxes, you must configure DNS records (SPF, DKIM, DMARC) and an SMTP service. 
+            Email delivery generally will work after setup of SPF and DKIM. We recommend brevo.com or SendGrid (free plan: 100 emails/day). For SendGrid - Host: <code>smtp.sendgrid.net</code>, Port: 587, Username: <code>apikey</code>, Password: [Your API Key], Encryption: TLS. Alternatively, use Google Workspace (<code>smtp.gmail.com</code>, Port 587, TLS) for low-volume emails. Avoid "noreply" addresses in the From Email field above to improve deliverability. This section provides step-by-step instructions using NameSilo (DNS provider) and Brevo (SMTP provider) as examples. For other providers, consult their documentation, but the principles remain similar.</p>
             <blockquote>Since February 2024, Gmail, Yahoo, and other providers require SPF and DKIM for bulk senders. Misconfigured DNS or SMTP settings may cause emails to be rejected or marked as spam.</blockquote>
 
             <h3>1. Setting Up SPF Record (NameSilo)</h3>
@@ -480,14 +480,14 @@
                 <li>Confirm a green checkmark next to the sender.</li>
             </ol>
             <div class="screenshot"><img src="sender-email-setup.png" alt="sender email setup"></div>
-            <blockquote>If DKIM is set up, sender verification may be optional. Use the same From Email as in Dashmailer’s Settings tab.</blockquote>
+            <blockquote>If DKIM is set up, sender verification may be optional. Use the same From Email as in Monzur Mailer Settings tab.</blockquote>
 
-            <h3>5. Configuring SMTP in Dashmailer</h3>
-            <p>Enable SMTP in Dashmailer for reliable email delivery.</p>
+            <h3>5. Configuring SMTP in Monzur Mailer</h3>
+            <p>Enable SMTP in Monzur Mailer for reliable email delivery.</p>
             <ol>
                 <li>In Brevo, go to <strong>Account Dropdown > SMTP & API</strong>.</li>
                 <li>Copy <strong>SMTP Login</strong> and <strong>SMTP Key</strong> (regenerate if needed).</li>
-                <li>In WordPress, go to <strong>Dashmailer > Settings</strong>.</li>
+                <li>In WordPress, go to <strong>Monzur Mailer > Settings</strong>.</li>
                 <li>Check <strong>Enable SMTP</strong> and enter:
                     <ul>
                         <li><strong>Host:</strong> <code>smtp-relay.brevo.com</code></li>
@@ -507,7 +507,7 @@
 
         <section id="getting-started">
             <h2>F) Getting Started - The Admin Interface</h2>
-            <p>After installation and deliverability setup, configure Dashmailer via the <strong>Dashmailer</strong> menu in your WordPress dashboard. The plugin has four tabs: Composer, Settings, Email Logs, and Templates.</p>
+            <p>After installation and deliverability setup, configure Monzur Mailer via the <strong>Monzur Mailer</strong> menu in your WordPress dashboard. The plugin has four tabs: Composer, Settings, Email Logs, and Templates.</p>
 
             <h3>1. Composer Tab</h3>
             <p>Compose and send emails using the rich text editor.</p>
@@ -562,7 +562,7 @@
 
         <section id="for-developers">
             <h2>G) For Developers (Hooks & Filters)</h2>
-            <p>Dashmailer includes WordPress filters for customization. Add these to your theme’s <code>functions.php</code> or a custom plugin.</p>
+            <p>Monzur Mailer includes WordPress filters for customization. Add these to your theme’s <code>functions.php</code> or a custom plugin.</p>
 
             <h3>Filter: wpqm_mail_subject</h3>
             <p>Modify the email subject before sending.</p>
@@ -591,7 +591,7 @@ This email is confidential.
             <pre>
 add_filter('wpqm_email', 'add_custom_mail_header', 10, 1);
 function add_custom_mail_header($headers) {
-    $headers[] = 'X-Mailer: Dashmailer-Custom';
+    $headers[] = 'X-Mailer: monzurmailer-Custom';
     return $headers;
 }
             </pre>
@@ -618,7 +618,7 @@ function add_custom_mail_header($headers) {
                 <li>Ensure the SPF record is set in NameSilo (e.g., <code>v=spf1 include:_spf.sib.com ~all</code>). Wait 24–48 hours for propagation.</li>
                 <li>Verify that Brevo added the DKIM (and optionally DMARC) records in NameSilo’s DNS settings. Check with MX Toolbox (<code>dkim:yourdomain.com:sib</code> or <code>dmarc:yourdomain.com</code>).</li>
                 <li>Confirm the sender email is verified in Brevo (<strong>Senders, Domains & IP > Senders</strong>).</li>
-                <li>Check Dashmailer’s Email Logs and enable <code>WP_DEBUG_LOG</code> for errors.</li>
+                <li>Check Monzur Mailer’s Email Logs and enable <code>WP_DEBUG_LOG</code> for errors.</li>
                 <li>Contact Brevo support if DNS records weren’t added automatically or if deliverability issues persist.</li>
             </ul>
 
@@ -639,10 +639,10 @@ define('WP_DEBUG_DISPLAY', false);
             </ul>
 
             <h3>Q: Can I test the Spammyness of my Emails or setup?</h3>
-            <p>Verify email setup in Dashmailer's settings and test with a free tools like Mail-Tester.</p>
+            <p>Verify email setup in Monzur Mailer's settings and test with a free tools like Mail-Tester.</p>
             <p>We don't guarantee the service of those third party tools but we found it working</p>
 
-            <h3>Q: Can I use Dashmailer without SMTP?</h3>
+            <h3>Q: Can I use Monzur Mailer without SMTP?</h3>
             <p>Yes, but PHP <code>mail()</code> is less reliable and often blocked by hosts or filtered by recipients. SMTP (e.g., Brevo) is strongly recommended.</p>
 
             <h3>Q: Why is my test email not sending?</h3>
@@ -673,10 +673,10 @@ define('WP_DEBUG_DISPLAY', false);
 
         <section id="support">
             <h2>J) Support</h2>
-            <p>We don't offer dedicated support via wordpress.org forum comments and support sections for Dashmailer.</p>
+            <p>We don't offer dedicated support via wordpress.org forum comments and support sections for Monzur Mailer.</p>
             <p>Include the following when requesting support:</p>
             <ul>
-                <li>Dashmailer version.</li>
+                <li>Monzur Mailer version.</li>
                 <li>WordPress version.</li>
                 <li>Detailed issue description.</li>
                 <li>Error messages (if any).</li>
@@ -688,7 +688,7 @@ define('WP_DEBUG_DISPLAY', false);
 
         <section id="credits">
             <h2>K) Credits</h2>
-            <p>DashMailer was developed with passion, adhering to WordPress coding standards and leveraging core functions like <code>wp_mail()</code>.</p>
+            <p>Monzur Mailer was developed with passion, adhering to WordPress coding standards and leveraging core functions like <code>wp_mail()</code>.</p>
             <p>Special thanks to our users for their support!</p>
         </section>
     </div>
